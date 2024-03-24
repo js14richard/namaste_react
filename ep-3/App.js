@@ -1,3 +1,6 @@
+import React from "react"
+import ReactDOM from "react-dom"
+
 
 // React.CreateElement creates the React element (JS-Object) then the render method converts it into HTML 
 
