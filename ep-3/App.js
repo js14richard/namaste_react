@@ -14,7 +14,37 @@ console.log(heading)
 
 const jsxHeading = <h1 id="jsxHeading">This is a heading from JSX </h1>
 
+
+// Functional components => A function that returns the JSX
+
+const Title = () => <h1>This is the Title component</h1>
+
+const Header = () =>{
+   return <h2>This is the Header Component</h2>
+}
+
+const HeroSection = () =>{
+    return(
+        <h2>This is the Hero Section</h2>
+    )
+}
+
+
+// Component Composition  --> Calling a component inside a component
+const HomePage = ()=>{
+    return(
+        <div className="homepage">
+            <Header/>
+            <Title/>
+            
+            <HeroSection/>
+        </div>
+    )
+}
+
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 console.log(root)
 
-root.render(jsxHeading) 
+root.render(<HomePage />) 
