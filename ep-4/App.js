@@ -47,6 +47,7 @@ const RestaurantCard = () => {
     return(
         <div className="restaurant-card">
             <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/6e04be27387483a7c00444f8e8241108" alt="restaurant image" className="restaurant-card-image"/>
+            <h2 className="restaurant-card-offer-text">50% off upto ₹100</h2>
             <div className="restaurant-card-text">
                 <h3>The Good Bowl</h3>
                 <h3>4.4. 35-40 mins</h3>
