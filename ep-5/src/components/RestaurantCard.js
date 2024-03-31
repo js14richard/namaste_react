@@ -2,7 +2,6 @@ import { cardImagesUrl } from "../utils/constants"
 
 export const RestaurantCard = (props) => {
     const {restData} = props
-    console.log(restData)
 
     const {
         cloudinaryImageId, 
@@ -14,7 +13,6 @@ export const RestaurantCard = (props) => {
         locality,
         aggregatedDiscountInfoV3
     } = restData?.info
-    console.log("siril",aggregatedDiscountInfoV3?.header)
     const discountHeader = aggregatedDiscountInfoV3?.header;
     const discountSubHeader = aggregatedDiscountInfoV3?.subHeader;
     return(
