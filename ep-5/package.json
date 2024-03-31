@@ -1,0 +1,28 @@
+{
+    "name": "ep-2",
+    "version": "1.0.0",
+    "description": "namste_react ep-2",
+    "scripts": {
+        "test": "jest",
+        "start": "parcel index.html",
+        "build": "parcel build index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/js14richard/namaste_react.git"
+    },
+    "author": "Siril Richard",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/js14richard/namaste_react/issues"
+    },
+    "homepage": "https://github.com/js14richard/namaste_react#readme",
+    "devDependencies": {
+        "parcel": "^2.12.0",
+        "process": "^0.11.10"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}

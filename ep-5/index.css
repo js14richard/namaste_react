@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.header-container{
+    box-shadow: 2;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container{
+    display: flex;
+    height: inherit;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.logo-location{
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
+.navbar-logo{
+    height: 50px;
+}
+
+.navbar-location{
+    margin-left:30px ;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(27, 26, 26);
+}
+
+.location-dropdown{
+    margin-left:20px ;
+    color:#ff8000;
+    font-size: 25px;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-item{
+    margin:10px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media (max-width: 700px) {
+    .navbar, .navbar-container {
+        flex-direction: column;
+        flex-basis: 100%;
+        align-items: center;
+    }
+}
+
+.nav-item:hover{
+    color: #ff8000;
+}
+
+/* Home Styling */
+
+.home-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.home-container{
+    display: flex;
+    width: 83%;
+}
+
+.restaurant-containter{
+    margin-top: 20px;
+    padding:5px;  
+}
+
+.restaurant-heading{
+    margin-left: 30px;
+}
+
+.restaurant-card-containter{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.restaurant-card{
+    margin: 15px;
+    height: 320px;
+    padding:7px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition:all .3s ease-in-out;
+}
+
+.restaurant-card-image{
+    border-radius: 15px;
+    margin-left: 2px;
+    width: 99%;
+    height: 55%;
+    object-fit: cover;
+}
+
+.restaurant-card-offer-text{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.5); 
+    top:45%;
+    left:5%;
+}
+
+.restaurant-card-text > *{
+    padding:4px;
+}
+
+.restaurant-card-text > p{
+    color:#63615e;
+}
+
+.restaurant-card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.03);
+    transition:all .2s ease-in-out;
+}
