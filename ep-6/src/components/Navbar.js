@@ -1,6 +1,11 @@
+import { useState } from "react"
 import { LogoImageUrl } from "../utils/constants"
 
+
 export const Navbar = () => {
+
+    const [loginState, setLoginState] = useState("Login");
+
     return(
         <div className="navbar-container">
             <div className="logo-location">
@@ -13,9 +18,6 @@ export const Navbar = () => {
             </div>
             <nav className="navbar">
                 <div className="nav-item">
-                    Search
-                </div>
-                <div className="nav-item">
                     Offers
                 </div>
                 <div className="nav-item">
@@ -27,6 +29,11 @@ export const Navbar = () => {
                 <div className="nav-item">
                     Cart
                 </div>
+                <button className="nav-item btn" onClick={
+                        ()=> (loginState === "Login") ? setLoginState("Logout") : setLoginState("Login") 
+                    }>{loginState}
+                </button>
+                
             </nav>
         </div>
     )

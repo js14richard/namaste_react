@@ -8,6 +8,8 @@ export const RestaurantContainer = () => {
 
     const [resList, setResList] = useState([]);
 
+    const [filteredResList, setFilteredResList] = useState([]);
+
     useEffect(()=>{
         fetchRestaurantData();
     },[]);
@@ -22,6 +24,7 @@ export const RestaurantContainer = () => {
                 restaurants = card.card.card.gridElements.infoWithStyle.restaurants;
                 console.log("json", restaurants)
                 setResList(restaurants);
+                setFilteredResList(restaurants);
             }
         });
 
@@ -31,13 +34,22 @@ export const RestaurantContainer = () => {
     return (resList.length === 0) ? <ShimmerCards/> : (
         <div className="restaurant-containter">
             <h2 className="restaurant-heading">Top restaurant chains in Chennai</h2>
-            <button onClick={()=>{
-                const filteredList = resList.filter((res)=> res.info.avgRating > 4 );
-                setResList(filteredList);
-            }} className="restaurant-heading filter-button"> Filter Top Rated</button>
+            <div className="filter-section">
+                
+                <input type="search" className="search-field" placeholder="search restaruants" onChange={
+                    (e)=> {
+                    const filteredList = resList.filter((res)=> res.info.name.toLowerCase().includes(e.target.value.toLowerCase()))
+                    setFilteredResList(filteredList);
+                }}/>
+                
+                <button onClick={()=>{
+                    const filteredList = resList.filter((res)=> res.info.avgRating > 4.5 );
+                    setFilteredResList(filteredList);
+                }} className="restaurant-heading filter-button"> Filter Top Rated</button>
+            </div>
             <div className="restaurant-card-containter">
                 {
-                    resList.map(restaurant => (
+                    filteredResList.map(restaurant => (
                         <RestaurantCard key={restaurant.info.id} restData = {restaurant}/>
                     ))
                 }
