@@ -27,10 +27,8 @@ export const RestaurantContainer = () => {
 
     }
 
-    if (resList.length === 0){
-        return <ShimmerCards />
-    }
-    return(
+
+    return (resList.length === 0) ? <ShimmerCards/> : (
         <div className="restaurant-containter">
             <h2 className="restaurant-heading">Top restaurant chains in Chennai</h2>
             <button onClick={()=>{
