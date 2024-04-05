@@ -162,3 +162,43 @@
     transform: scale(1.03);
     transition:all .2s ease-in-out;
 }
+
+
+/* Shimmer Cards Styling */
+
+.shimmer-container{
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    margin: 15px;
+    height: 320px;
+    padding:7px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 280px;
+    background-color: rgba(251, 251, 251, 0.946);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shimmer-card-img{
+    height: 55%;
+    background-color: rgba(117, 115, 115, 0.086);
+    border-radius: 15px;
+}
+
+.shimmer-card-text-1{
+    height: 15px;
+    margin-top: 10%;
+    width: 60%;
+    background-color: rgb(235, 233, 233);
+}
+
+.shimmer-card-text-2{
+    height: 15px;
+    margin-top: 15%;
+    width: 45%;
+    background-color: rgb(235, 233, 233);
+}

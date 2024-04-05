@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { restList } from "../utils/constants"
 import { RestaurantCard } from "./RestaurantCard"
+import ShimmerCards from "./ShimmerCards";
 
 
 export const RestaurantContainer = () => {
 
-    const [resList, setResList] = useState(restList);
+    const [resList, setResList] = useState([]);
 
     useEffect(()=>{
         fetchRestaurantData();
@@ -24,6 +25,10 @@ export const RestaurantContainer = () => {
             }
         });
 
+    }
+
+    if (resList.length === 0){
+        return <ShimmerCards />
     }
     return(
         <div className="restaurant-containter">
