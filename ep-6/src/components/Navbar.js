@@ -1,10 +1,19 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { LogoImageUrl } from "../utils/constants"
 
 
 export const Navbar = () => {
 
     const [loginState, setLoginState] = useState("Login");
+
+    // UseEffect will be called after the component is rendered
+    // If there is no dependency given in the useEffect it will be called everytime when ever the component render
+    // If [] is passed as dependency, useEffect will be called only once.
+    // If dependency array is [loginState] , useEffect will be called when ever the stateVariable value gets updated.
+
+    useEffect(()=>{
+        console.log("Use Effect Called")
+    },[loginState])
 
     return(
         <div className="navbar-container">
